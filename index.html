@@ -130,6 +130,79 @@
     user-select: none;
     z-index: 1000;
   }
+ /* ===== RESPONSIVE CHO IPAD & MÀN HÌNH NHỎ ===== */
+@media (max-width: 1024px) {
+  .header-title {
+    font-size: 28px;
+    margin-bottom: 40px;
+  }
+
+  .circle-container {
+    width: 550px;
+    height: 550px;
+  }
+
+  .center-logo {
+    width: 220px;
+    height: 220px;
+  }
+
+  .icon {
+    width: 100px;
+    height: 100px;
+  }
+
+  .icon-label {
+    font-size: 12px;
+  }
+
+  /* Giảm bán kính vòng tròn chứa icon */
+  .icon-wrapper:nth-child(n+2) {
+    transform: rotate(calc((var(--i) - 1) * 36deg)) translate(230px)
+               rotate(calc(-1 * (var(--i) - 1) * 36deg));
+  }
+
+  /* Popup video vừa khung iPad */
+  .video-modal video {
+    width: 90vw;
+    height: auto;
+  }
+}
+
+/* ===== RESPONSIVE CHO IPAD DỌC & MOBILE ===== */
+@media (max-width: 768px) {
+  .header-title {
+    font-size: 24px;
+    margin-bottom: 30px;
+  }
+
+  .circle-container {
+    width: 400px;
+    height: 400px;
+  }
+
+  .center-logo {
+    width: 160px;
+    height: 160px;
+  }
+
+  .icon {
+    width: 80px;
+    height: 80px;
+  }
+
+  .icon-label {
+    font-size: 11px;
+  }
+
+  .icon-note {
+    display: none; /* Ẩn ghi chú trên mobile cho gọn */
+  }
+
+  .video-modal video {
+    width: 95vw;
+  }
+}
 </style>
 </head>
 <body>
@@ -216,3 +289,4 @@
 
 </body>
 </html>
+
